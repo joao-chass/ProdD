@@ -1,28 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item lines="full">
-      <ion-icon slot="start" name="moon"></ion-icon>
-      <ion-label>
-        Toggle Dark Theme
-      </ion-label>
-      <ion-toggle id="themeToggle" slot="end"></ion-toggle>
-    </ion-item>
-  </ion-list>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
+ 
 
-  <div id="container">
-    <ion-button color="danger" routerLink="register">Register</ion-button>  
-  </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6"  width-100 >
+          <ion-card class="addUser ion-text-center" >
+            <ion-icon name="person-add-outline" style="font-size: 32px;"></ion-icon>
+            <ion-card-title>Regiter</ion-card-title>
+            <ion-card-subtitle color="dark">add new user</ion-card-subtitle>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6"  width-100 >
+          <ion-card class="seeUser ion-text-center" >
+            <ion-icon name="people-outline" style="font-size: 32px;"></ion-icon>
+            <ion-card-title>Users</ion-card-title>
+            <ion-card-subtitle color="dark">see your users</ion-card-subtitle>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6"  width-100 >
+          <ion-card class="company ion-text-center" >
+            <ion-icon name="business-outline" style="font-size: 32px;"></ion-icon>
+            <ion-card-title>Company</ion-card-title>
+            <ion-card-subtitle color="dark">see your users</ion-card-subtitle>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6"  width-100 >
+          <ion-card class="data ion-text-center" >
+            <ion-icon name="analytics-outline" style="font-size: 32px;"></ion-icon>
+            <ion-card-title>Datt</ion-card-title>
+            <ion-card-subtitle color="dark">see your users</ion-card-subtitle>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+ 
 </ion-content>
+

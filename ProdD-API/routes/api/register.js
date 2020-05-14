@@ -28,8 +28,6 @@ router.post('/', async(req, res) => {
         birthDate : req.body.birthDate,
         intoInCompany : req.body.intoInCompany,
         gender : req.body.gender,
-        jobRole : req.body.jobRole,
-        departament : req.body.departament,
         manager : req.body.manager
     })
 

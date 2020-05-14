@@ -3,7 +3,7 @@
   <ion-grid>
     <ion-row>
     
-      <ion-button fill="clear" color="dark">
+      <ion-button fill="clear" color="dark" routerLink=''>
         <ion-icon name="chevron-back-outline" style="font-size:x-large;"></ion-icon>
       </ion-button>
   
@@ -31,7 +31,7 @@
       <ion-label position="floating">
         E-mail
       </ion-label>
-      <ion-input ></ion-input>
+      <ion-input [(ngModel)]="register.email"></ion-input>
       <ion-icon name="mail-outline" slot="end" color="ternary"></ion-icon> 
     </ion-item>
 
@@ -39,7 +39,7 @@
       <ion-label position="floating">
         Name
       </ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="register.name"></ion-input>
       <ion-icon name="person-outline" slot="end" color="ternary"></ion-icon>
     </ion-item>
 
@@ -48,7 +48,7 @@
       <ion-label position="floating">
         Birth Date
       </ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="register.birthDate"></ion-input>
       <ion-icon name="pizza-outline" slot="end" color="ternary"></ion-icon>
     </ion-item>
 
@@ -57,13 +57,13 @@
       <ion-label position="floating">
         Into in company
       </ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="register.intoInCompany"></ion-input>
       <ion-icon name="boat-outline" slot="end" color="ternary"></ion-icon>
     </ion-item>
 
     <ion-item>
       <ion-label>Gender</ion-label>
-      <ion-select placeholder="Select One">
+      <ion-select placeholder="Select One" [(ngModel)]="register.gender">
         <ion-select-option value="f">Female</ion-select-option>
         <ion-select-option value="m">Male</ion-select-option>
       </ion-select>
@@ -71,11 +71,11 @@
 
     <ion-item>
       <ion-label>Menager</ion-label>
-      <ion-toggle slot="end" name="cherry" color="tertiary" checked></ion-toggle>
+      <ion-toggle slot="end" name="cherry" color="tertiary" checked [(ngModel)]="register.manager"></ion-toggle>
     </ion-item>
 
     <section>
-    <ion-button color="tertiary" expand="block">Register</ion-button>
+    <ion-button color="tertiary" expand="block" (click)="registerFinish()">Register</ion-button>
     </section>
 
 

@@ -1,27 +1,48 @@
-#container {
-  text-align: center;
+$padding-top: 40px;
+$height: 180px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-row{
+  ion-card{ 
+     width:100% !important;
+     margin-left: 0 !important; 
+     margin-right: 0 !important; 
+     
+     img{ width:100%; } 
+ } 
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.addUser {
+  color: white;
+  padding-top: $padding-top;
+  height: $height;
+  background-image: linear-gradient(to top right, #d241ff, #ff00bfab);
+  border-radius: 6px;
+  box-shadow: 0px 3px 8px #c649fea6;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.seeUser {
+  color: white;
+  padding-top: $padding-top;
+  height: $height;
+  background-image: linear-gradient(to top right, #7441ff, #001affab);
+  border-radius: 6px;
+  box-shadow: 0px 3px 8px #7441ff;
 }
 
-#container a {
-  text-decoration: none;
+.company {
+  color: white;
+  padding-top: $padding-top;
+  height: $height;
+  background-image: linear-gradient(to top right, #41ffa6, #00ff40ab);
+  border-radius: 6px;
+  box-shadow: 0px 3px 8px #41ffa6;
+}
+
+.data {
+  color: white;
+  padding-top: $padding-top;
+  height: $height;
+  background-image: linear-gradient(to top right, #FF9800, #f7eb32);
+  border-radius: 6px;
+  box-shadow: 0px 3px 8px #FF9800;
 }

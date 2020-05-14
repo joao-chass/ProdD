@@ -2,8 +2,11 @@ require('dotenv').config();
 
 const express = require('express')
 const router = express.Router()
+var cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
+
+app.use(cors())
 
 mongoose.connect('mongodb://localhost/register',{useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
 const db = mongoose.connection

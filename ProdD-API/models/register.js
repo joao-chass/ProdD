@@ -12,22 +12,14 @@ const registerSchema = new mongoose.Schema({
         required: true
     },
     birthDate: {
-        type: Date,
+        type: String,
         required: true
     },
     intoInCompany: {
-        type: Date,
+        type: String,
         required: true
     },
     gender: {
-        type: String,
-        required: true
-    },
-    jobRole: {
-        type: String,
-        required: true
-    },
-    departament: {
         type: String,
         required: true
     },

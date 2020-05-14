@@ -1,3 +1,4 @@
+import { TabsComponent } from './tabs/tabs.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -15,6 +16,6 @@ import { RegisterComponent } from './register/register.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, RegisterComponent]
+  declarations: [HomePage, RegisterComponent, TabsComponent]
 })
 export class HomePageModule {}
