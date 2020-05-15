@@ -1,0 +1,37 @@
+.register {
+    background-color: #4167ff;
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top right, #7441ff, #001affab);
+    border-radius: 6px;
+    box-shadow: 0px 3px 8px #7441ff;
+}
+
+.button-setings{
+    right: 0;
+    position: absolute;
+}
+
+.tab {
+    background-color: #a65df9;
+    height: 112px;
+    width: 112px;
+    color: white;
+    top: -40px;
+    padding: 38px 12px 7px 27px;
+    font-size: 58px;
+    left: -11px;
+    border-radius: 50px;
+    position: relative;
+    /* text-shadow: -3px -2px black; */
+    box-shadow: 3px 7px 20px #a65df978;
+}
+
+.text-form{
+    position: absolute;
+    right: 49px;
+    top: 18px;
+    font-size: 23px;
+    text-shadow: 3px 6px 7px #040404;
+}

@@ -1,3 +1,4 @@
+import { UserControlComponent } from './user-control/user-control.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
@@ -11,7 +12,11 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-  }
+  },
+  {
+    path: 'user-control',
+    component: UserControlComponent,
+  },
 ];
 
 @NgModule({

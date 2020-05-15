@@ -1,3 +1,4 @@
+import { UserControlComponent } from './user-control/user-control.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,6 +17,6 @@ import { RegisterComponent } from './register/register.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, RegisterComponent, TabsComponent]
+  declarations: [HomePage, RegisterComponent, TabsComponent, UserControlComponent]
 })
 export class HomePageModule {}
