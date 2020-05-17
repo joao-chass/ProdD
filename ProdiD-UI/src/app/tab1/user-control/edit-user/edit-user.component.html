@@ -1,0 +1,86 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <ion-button fill="clear" color="dark" (click)="register()" >
+        <ion-icon name="chevron-back-outline" style="font-size:x-large;"></ion-icon>
+      </ion-button>
+
+
+      <ion-button fill="clear" color="dark" class="button-setings" (click)="adduser()" >
+        <ion-icon name="attach-outline"></ion-icon>
+      </ion-button>
+
+
+    </ion-row>
+  </ion-grid>
+  <ion-avatar class="avatar">
+    <img src="https://img.olhardigital.com.br/uploads/acervo_imagens/2019/12/r16x9/20191206050435_1200_675_-_elon_musk.jpg">  
+  </ion-avatar>
+  <ion-col>
+    <div class="ion-text-center">
+      <h3>{{userEdit.name}}</h3>
+      {{userEdit.email}}
+    </div>
+  </ion-col>
+
+  <ion-card>
+    <div class="ion-text-center" >
+    <h4> Edit </h4>
+    </div>
+
+    <ion-item >
+      <ion-label position="floating">
+        E-mail
+      </ion-label>
+      <ion-input value="{{userEdit.email}}" [(ngModel)]="userEdit.email"></ion-input>
+      <ion-icon name="mail-outline" slot="end" color="ternary"></ion-icon> 
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">
+        Name
+      </ion-label>
+      <ion-input value="{{userEdit.name}}" [(ngModel)]="userEdit.name"></ion-input>
+      <ion-icon name="person-outline" slot="end" color="ternary"></ion-icon>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">
+        Birth Date
+      </ion-label>
+      <ion-input value="{{userEdit.birthDate}}" [(ngModel)]="userEdit.birthDate"></ion-input>
+      <ion-icon name="pizza-outline" slot="end" color="ternary"></ion-icon>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">
+        Into in company
+      </ion-label>
+      <ion-input value="{{userEdit.intoInCompany}}" [(ngModel)]="userEdit.intoInCompany"></ion-input>
+      <ion-icon name="boat-outline" slot="end" color="ternary"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select placeholder="Select One" value="{{userEdit.gender}}" [(ngModel)]="userEdit.gender">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Menager</ion-label>
+      <ion-toggle slot="end" name="cherry" color="tertiary" checked value="{{userEdit.manager}}" [(ngModel)]="userEdit.manager"></ion-toggle>
+    </ion-item>
+
+    <section>
+    <ion-button color="tertiary" expand="block" (click)="editUse()" >Register</ion-button>
+    </section>
+  </ion-card>
+  
+</ion-content>
+
+ 
