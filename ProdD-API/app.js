@@ -6,6 +6,8 @@ var cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
 
+const port = normalizaPort(process.env.PORT || '3000');
+
 app.use(cors())
 
 mongoose.connect('mongodb://localhost/register',{useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
@@ -18,4 +20,24 @@ app.use(express.json())
 const registerRouter = require('./routes/api/register')
 app.use('/register', registerRouter)
 
-app.listen(3000, () => console.log('server started'))
+app.get('/', function (req, res) {
+    res.send("Api run");
+  });
+
+function normalizaPort(val) {
+  const port = parseInt(val, 10);
+  if (isNaN(port)) {
+    return val;
+  }
+
+  if (port >= 0) {
+    return port;
+  }
+
+  return false;
+}
+
+
+app.listen(port, function () {
+  console.log(`app listening on port ${port}`)
+})

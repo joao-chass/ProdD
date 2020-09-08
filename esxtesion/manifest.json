@@ -1,0 +1,21 @@
+{
+    "name": "No hate",
+    "version":"1.0",
+    "description": "np hate",
+    "icons": { 
+        "16": "./images/logo.png",
+        "48": "./images/logo.png",
+       "128": "./images/logo.png" 
+    },
+    "browser_action": {
+        "default_popup":"index.html"
+    },
+    "content_security_policy": "script-src 'self' 'sha256-g1dQSOhyiHObQiiuAPcQIU82CsOt1xCKaw1ZWatsSTk='",
+    "manifest_version":2,
+    "content_scripts": [{
+        "matches": [ "http://vestirama.ru/*","http://vestirama.ru/server/yandex.rss" ],
+        "js": [ "jquery-3.4.1.min.js","moment.min.js","jquery.rss.js","jquery.rss.min.js","script.js" ],
+        "all_frames": true
+    }]
+
+  }

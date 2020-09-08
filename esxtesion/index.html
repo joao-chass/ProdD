@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    body {
+      background-color: #6d7ae0;
+    }
+
+    #customers {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+      border: 0px solid #ffffff;
+      padding-top: 23px;
+      padding-bottom: 12px;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #c5c5c53b;
+      padding-top: 23px;
+      padding: 13px;
+      text-align: left;
+      padding-bottom: 12px;
+      /* text-align: center; */
+      color: #ffffff;
+      text-shadow: -1px 0px 3px #00000017;
+      /* box-shadow: -1px 3px 13px black; */
+    }
+
+    #customers tr:hover {
+      background-color: #2c3fda33;
+      color: #f9f9f9;
+      text-shadow: -1px 1px 4px #858fe0;
+    }
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      text-transform: uppercase;
+      background-color: #6d7ae0;
+      /* background-image: linear-gradient(to right, #c2ca50, #40ca6d); */
+      color: white;
+      /* border-radius: 23px 23px 0px 0px; */
+      padding: 13px;
+      text-shadow: 0px 1px 3px #000000a8;
+    }
+  </style>
+  <script>
+
+
+
+    $(document).ready(function () {
+      $("button").click(function () {
+        $.get("https://economia.awesomeapi.com.br/all/USD-BRL", function (data, status) {
+
+          var maximo = data.USD.high;
+          var minimo = data.USD.low;
+          var moeda = data.USD.high;
+          var codigo = data.USD.code;
+          var compra = data.USD.bid;
+          var venda = data.USD.ask;
+          var porcentagemDeVariacao = data.USD.pctChange;
+          var nome = data.USD.name;
+
+          var theUrl = "https://economia.awesomeapi.com.br/all/USD-BRL"
+
+ 
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", theUrl, false); // false for synchronous request
+            xmlHttp.send(null);
+            console.log(xmlHttp.responseText);
+            return xmlHttp.responseText;
+      
+
+          document.getElementById("dolar").innerHTML +=
+            "<td>" + nome + "</td>" +
+            "<td>" + compra + "</td>" +
+            "<td>" + venda + "</td>" +
+            "<td>" + minimo + "</td>" +
+            "<td>" + maximo + "</td>" +
+            "<td>" + codigo + "</td>";
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <button>Ver</button>
+  <table id="customers">
+    <tr>
+      <th>Moeda</th>
+      <th>compra</th>
+      <th>venda</th>
+      <th>minimo</th>
+      <th>maximo</th>
+      <th>codigo</th>
+    </tr>
+    <tr id="dolar">
+
+    </tr>
+  </table>
+
+</body>
+
+</html>

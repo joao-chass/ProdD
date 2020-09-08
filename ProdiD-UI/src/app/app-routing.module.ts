@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { EditUserComponent } from './tab1/user-control/edit-user/edit-user.component';
 import { UserControlComponent } from './tab1/user-control/user-control.component';
 import { RegisterUserComponent } from './tab1/register-user/register-user.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterUserComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'user-control',
